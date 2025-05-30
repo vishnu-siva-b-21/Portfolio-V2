@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Vishnu Siva </title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/icon.png') }}">
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .error {
+            border-color: #ff6b6b !important;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            margin-top: 5px;
+            font-size: 0.875em;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <style>
+        .teammates-thumb:hover {
+            transform: translateY(20px);
+        }
+
+        .teammates-thumb:hover .info {
+            display: block;
+            opacity: 1;
+            transform: translateY(0px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fef6e4;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .info p {
+            color: #fef6e4;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="" class="navbar-brand mx-auto mx-lg-0">My Memento</a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_4">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_5">Experience</a>
+                    </li>
+                </ul>
+
+                <div class="d-lg-flex align-items-center d-none ms-auto">
+                    <a href="tel:+917708701121" title="Call">
+                        <i style="display:block;" class="navbar-icon bi bi-telephone-plus me-3"></i>
+                    </a>
+                    <a href="mailto:vishnu.siva.b.21@example.com" title="Email">
+                        <i style="display:block;" class="navbar-icon bi bi-envelope me-3"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/b-vishnu-siva/" target="_blank" title="LinkedIn">
+                        <i style="display:block;" class="navbar-icon bi bi-linkedin me-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-12">
+                        <div class="hero-text">
+                            <div class="hero-title-wrap d-flex flex-column align-items-start mb-2">
+                                <h1 class="hero-title ms-3 mb-0">Hi!</h1>
+                                <h1 class="hero-title ms-3 mb-0">I am Vishnu Siva</h1>
+                            </div>
+                            <h2 class="mb-4">I’m&nbsp;a&nbsp; <span class="typing"></span></h2>
+                            <p class="mb-4">
+                                <a class="custom-btn btn custom-link"
+                                    href="{{ url_for('static', filename='docs/Vishnu Siva B resume.pdf') }}"
+                                    download="Vishnu-Siva_Resume.pdf">Resume</a>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-12 position-relative">
+                        <div class="wrapper d-none d-lg-block">
+                            <img src="{{ url_for('static', filename='images/vishnu_siva_1.jpeg') }}" alt="Teammate"
+                                class="image--cover img-fluid">
+                        </div>
+                        <div class="d-lg-none d-flex justify-content-center">
+                            <img src="{{ url_for('static', filename='images/vishnu_siva_1.jpeg') }}" alt="Teammate"
+                                class="image--cover img-fluid">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fef6e4" fill-opacity="1"
+                    d="M0,160L24,160C48,160,96,160,144,138.7C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,208C624,235,672,245,720,240C768,235,816,213,864,186.7C912,160,960,128,1008,133.3C1056,139,1104,181,1152,202.7C1200,224,1248,224,1296,197.3C1344,171,1392,117,1416,90.7L1440,64L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z">
+                </path>
+            </svg>
+        </section>
+
+        <section class="about section-padding" id="section_2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-12 d-none d-lg-block">
+                        <img src="{{ url_for('static', filename='images/vishnu_siva_2.jpg') }}"
+                            class="about-image img-fluid" alt="Profile Image" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="about-thumb">
+                            <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
+                                <h2 class="text-white me-4 mb-0">About Me</h2>
+                            </div>
+                            <p>
+                                I'm Vishnu Siva B, a Final Year Computer Science student at SIST and a BS student at IIT
+                                Madras.
+                                Passionate about <strong>software development, backend engineering, and AI</strong>, I
+                                specialize in
+                                <strong>MERN stack, Flutter, Flask, React Native, and cloud architectures</strong>.
+                            </p>
+                            <p>
+                                With experience at <strong>Benx Solutions LLP (Backend & ML Engineer) and Cosmic AI
+                                    365</strong>,
+                                I’ve built <strong>scalable systems, AI models, and REST APIs</strong>. I've led
+                                multiple hackathon
+                                teams to success, solving real-world challenges with technology.
+                            </p>
+                            <p>
+                                My goal is to <strong>bridge AI and software engineering</strong> to create
+                                <strong>intelligent,
+                                    human-centric solutions</strong> that drive innovation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="profile-thumb">
+                            <div class="profile-title">
+                                <h4 class="mb-0">Info.</h4>
+                            </div>
+                            <div class="profile-body">
+                                <p>
+                                    <span class="profile-small-title">Name</span>
+                                    <span>Vishnu Siva B</span>
+                                </p>
+                                <p>
+                                    <span class="profile-small-title">Birthday</span>
+                                    <span>Jan 21, 2005</span>
+                                </p>
+                                <p>
+                                    <span class="profile-small-title">Phone</span>
+                                    <span><a href="tel: 305-240-9671">+91 7708701121</a></span>
+                                </p>
+                                <p>
+                                    <span class="profile-small-title">Email</span>
+                                    <span class="d-none d-lg-inline"><a
+                                            href="mailto:vishnu.siva.b.21@gmail.com">vishnu.siva.b.21@gmail.com</a>
+                                    </span>
+                                    <span class="d-lg-none"><a
+                                            href="mailto:vishnu.siva.b.21@gmail.com">vishnu.siva.b.21</a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                        <div class="about-thumb">
+                            <div class="row">
+                                <div class="col-lg-6 col-6 featured-border-bottom py-2">
+                                    <strong class="featured-numbers">25+</strong>
+
+                                    <p class="featured-text">Technologies Known</p>
+                                </div>
+
+                                <div class="col-lg-6 col-6 featured-border-start featured-border-bottom ps-5 py-2">
+                                    <strong class="featured-numbers">15+</strong>
+
+                                    <p class="featured-text">Hackathons Participated</p>
+                                </div>
+
+                                <div class="col-lg-6 col-6 pt-4">
+                                    <strong class="featured-numbers">15+</strong>
+
+                                    <p class="featured-text">Project Finished</p>
+                                </div>
+
+                                <div class="col-lg-6 col-6 featured-border-start ps-5 pt-4">
+                                    <strong class="featured-numbers">5+</strong>
+
+                                    <p class="featured-text">Domain Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="services section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-12 mx-auto">
+                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
+                            <h2 class="text-white ms-4 mb-0">Services</h2>
+                        </div>
+                        <div class="row pt-lg-5">
+                            <div class="col-lg-6 col-12">
+                                <div class="services-thumb">
+                                    <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                        <h3 class="mb-0">Web App Development</h3>
+                                    </div>
+                                    <p>
+                                        I specialize in modern web applications using <strong>MERN, PERN, Vue.js,
+                                            Angular, and
+                                            React</strong>.
+                                        Whether it's a single-page app, an e-commerce platform, or a business dashboard,
+                                        I build scalable
+                                        and interactive web solutions with <strong>Node.js, Express, MongoDB, and
+                                            PostgreSQL</strong>.
+                                    </p>
+                                    <div class="services-icon-wrap d-flex justify-content-center align-items-center">
+                                        <i class="services-icon bi-globe"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="services-thumb services-thumb-up">
+                                    <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                        <h3 class="mb-0">Mobile App Development</h3>
+                                    </div>
+                                    <p>
+                                        I develop high-performance mobile apps using <strong>React Native</strong>&
+                                        <strong>Flutter</strong>,
+                                        ensuring a smooth
+                                        and
+                                        cross-platform experience for both Android and iOS. From UI/UX design to backend
+                                        integration,
+                                        I create apps that engage users and scale efficiently.
+                                    </p>
+                                    <div class="services-icon-wrap d-flex justify-content-center align-items-center">
+                                        <i class="services-icon fab fa-app-store"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="services-thumb">
+                                    <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                        <h3 class="mb-0">Desktop App Development</h3>
+                                    </div>
+                                    <p>
+                                        I build <strong>cross-platform desktop applications</strong> using
+                                        <strong>Flutter</strong>, delivering
+                                        native-like
+                                        experiences on Windows, macOS, and Linux. Whether it's a business tool,
+                                        productivity app, or
+                                        enterprise software, I ensure seamless performance.
+                                    </p>
+                                    <div class="services-icon-wrap d-flex justify-content-center align-items-center">
+                                        <i class="services-icon bi-laptop"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="services-thumb services-thumb-up">
+                                    <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                        <h3 class="mb-0">AI & Machine Learning</h3>
+                                    </div>
+                                    <p>
+                                        I develop <strong>AI-powered solutions</strong> using <strong>TensorFlow,
+                                            PyTorch, and
+                                            Scikit-learn</strong>,
+                                        including NLP models, computer vision applications, and predictive analytics.
+                                        Let’s transform data into intelligent automation!
+                                    </p>
+                                    <div class="services-icon-wrap d-flex justify-content-center align-items-center">
+                                        <i class="services-icon fas fa-brain"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project section-padding" id="section_4">
+            <div class="col-lg-10 col-12 mx-auto">
+                <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
+                    <h2 class="text-white ms-4 mb-0">Projects</h2>
+                </div>
+                <div class="project-container">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <div class="project-item">
+                                <img src="{{ url_for('static', filename='images/projects/Smart Eval.png') }}"
+                                    alt="Project 4">
+                                <div class="project-title">
+                                    <span>Smart Eval</span>
+                                    <p>A website designed to evaluate student descriptive answers using deep learning
+                                        models, including Sentence Transformers and
+                                        T5 Tokenizer, to provide accurate and automated assessments.
+                                    </p>
+                                    <a href="https://smart-eval.onrender.com/" target="_blank">Visit</a>
+                                </div>
+                            </div>
+
+                            <div class="project-item">
+                                <img src="{{ url_for('static', filename='images/projects/Startup Fest.png') }}"
+                                    alt="Project 2" />
+                                <div class="project-title">
+                                    <span>Startup Fest 2024</span>
+                                    <p>SPA built to manage registrations and streamline the Sathyabama Startup Fest
+                                        event management process.</p>
+                                    <a href="https://sathyabama-startup-fest-2024-i5yg.onrender.com/"
+                                        target="_blank">Visit</a>
+                                </div>
+                            </div>
+
+                            <div class="project-item">
+                                <img src="{{ url_for('static', filename='images/projects/Sponza V1.png') }}"
+                                    alt="Project 3">
+                                <div class="project-title">
+                                    <span>Sponza</span>
+                                    <p>An interactive platform that bridges communication between influencers and
+                                        sponsors, enabling seamless collaboration
+                                        for conducting ad campaigns and promoting products effectively.
+                                    </p>
+                                    <a href="https://sponza-v1-ri0t.onrender.com/" target="_blank">Visit</a>
+                                </div>
+                            </div>
+
+                            <div class="project-item">
+                                <img src="{{ url_for('static', filename='images/projects/Disaster Management System.png') }}"
+                                    alt="Project 1" />
+                                <div class="project-title">
+                                    <span>Disaster Management System</span>
+                                    <p>A web app for an NGO that assists people in need by notifying volunteers and
+                                        regulating roles efficiently during emergencies.</p>
+                                    <a href="https://disaster-management-system-kh12.onrender.com/"
+                                        target="_blank">Visit</a>
+                                </div>
+                            </div>
+
+                            <div class="project-item">
+                                <img src="{{ url_for('static', filename='images/projects/Self Smith.png') }}"
+                                    alt="Project 2" />
+                                <div class="project-title">
+                                    <span>Self Smith</span>
+                                    <p>A web app designed to help teachers enhance their passive teaching skills through
+                                        insightful, psychology-based
+                                        questions. It provides actionable feedback to foster deeper student engagement
+                                        and learning.</p>
+                                    <a href="https://self-smith.onrender.com/" target="_blank">Visit</a>
+                                </div>
+                            </div>
+
+                            <div class="project-item">
+                                <img src="{{ url_for('static', filename='images/projects/landing page.png') }}"
+                                    alt="Project 4">
+                                <div class="project-title">
+                                    <span>BenX Home</span>
+                                    <p>A landing page designed for Benx Solutions LLP, showcasing its innovative
+                                        software solutions and services with a user-friendly interface and seamless
+                                        navigation.</p>
+                                    <a href="https://benxsolutions.in/" target="_blank">Visit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience section-padding" id="section_5">
+            <div class="col-lg-10 col-12 mx-auto">
+                <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
+                    <h2 class="text-white ms-4 mb-0">Experience</h2>
+                </div>
+                <div class="card-containers d-flex flex-wrap justify-content-between">
+                    <div class="profile-card">
+                        <div class="swiper-container profile-image">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/hal1.jpg') }}"
+                                        alt="Hack-a-league Project">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/hal2.jpg') }}"
+                                        alt="Hack-a-league Presentation">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/hal3.jpg') }}"
+                                        alt="Hack-a-league Team">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <h2 class="mt-3">Hack-a-league 3.0</h2>
+                        <p class="role">24-hour National Level Hackathon</p>
+                        <p class="description">We developed a healthcare website that integrates various AI models and
+                            APIs, enabling enhanced medical services and accessibility. This event was hosted at the
+                            Global Academy of Institute, Bangalore.</p>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="swiper-container profile-image">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/eae1.png') }}"
+                                        alt="Ease The Error Team">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/eae2.png') }}"
+                                        alt="Ease The Error API Integration">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/eae3.png') }}"
+                                        alt="Ease The Error Presentation">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                        </div>
+                        <h2 class="mt-3">Ease The Error</h2>
+                        <p class="role">24-hour National Level Hackathon</p>
+                        <p class="description">We designed a disaster management platform that uses APIs to analyze
+                            disaster risks and provide early warning systems. This was held at Sri Venkateswara College
+                            of Engineering, Chennai.</p>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="swiper-container profile-image">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/ts1.jpg') }}"
+                                        alt="Innovators Challenge">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/ts2.jpg') }}"
+                                        alt="Innovators AI Demo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/ts3.jpg') }}"
+                                        alt="Innovators Presentation">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <h2 class="mt-3">Techno Summit</h2>
+                        <p class="role">24-hour Hackathon</p>
+                        <p class="description">Developed an AI-powered women’s safety application with mobile and web
+                            support. Hosted at Sathyabama University.</p>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="swiper-container profile-image">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/ideathon1.png') }}"
+                                        alt="Ease The Error Team">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/ideathon2.png') }}"
+                                        alt="Ease The Error API Integration">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='images/experience/ideathon3.png') }}"
+                                        alt="Ease The Error Presentation">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                        </div>
+                        <h2 class="mt-3">Ideathon 2K24</h2>
+                        <p class="role">Idea Presentation</p>
+                        <p class="description">Proposed a smart education website to enhance online examination
+                            experiences. Conducted at Sathyabama University.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section-padding" id="section_6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-12">
+                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
+                            <h2 class="text-white ms-4 mb-0">Say Hi</h2>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-3 col-md-6 col-12 ps-lg-0">
+                        <div class="contact-info d-flex flex-column">
+                            <strong class="site-footer-title d-block mb-3">Get in Touch</strong>
+                            <p class="mb-2">
+                                Have a question, suggestion, or just want to say hello? Feel free to reach out using the
+                                form. I'd love to hear from you!
+                            </p>
+                            <strong class="site-footer-title d-block mt-4 mb-3">Email</strong>
+                            <p>
+                                <a href="mailto:vishnu.siva.b.21@gmail.com"> vishnu.siva.b.21@gmail.com </a>
+                            </p>
+                            <strong class="site-footer-title d-block mt-4 mb-3">Call</strong>
+                            <p class="mb-0">
+                                <a href="tel: +91 7708701121"> +91 7708701121 </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                        <form id="contact-form" class="custom-form contact-form" role="form">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-floating">
+                                        <input type="text" name="name" id="name" class="form-control"
+                                            placeholder="Name">
+                                        <label for="name">Name</label>
+                                        <div id="name-error" class="error-message"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-floating">
+                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                                            class="form-control" placeholder="Email address">
+                                        <label for="email">Email address</label>
+                                        <div id="email-error" class="error-message"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="form-check form-check-inline">
+                                        <input name="webdev" type="checkbox" class="form-check-input"
+                                            id="inlineCheckbox1" value="1">
+                                        <label class="form-check-label" for="inlineCheckbox1">
+                                            <i class="bi-globe form-check-icon"></i>
+                                            <span class="form-check-label-text">Web Dev</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="form-check form-check-inline">
+                                        <input name="appdev" type="checkbox" class="form-check-input"
+                                            id="inlineCheckbox3" value="1">
+                                        <label class="form-check-label" for="inlineCheckbox3">
+                                            <i class="bi-phone form-check-icon"></i>
+                                            <span class="form-check-label-text">App Dev</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="form-check form-check-inline">
+                                        <input name="desktopdev" type="checkbox" class="form-check-input"
+                                            id="inlineCheckbox4" value="1">
+                                        <label class="form-check-label" for="inlineCheckbox4">
+                                            <i class="bi-laptop form-check-icon"></i>
+                                            <span class="form-check-label-text">App Dev</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="form-check form-check-inline">
+                                        <input name="mldev" type="checkbox" class="form-check-input"
+                                            id="inlineCheckbox5" value="1">
+                                        <label class="form-check-label" for="inlineCheckbox5">
+                                            <i class="bi-robot form-check-icon"></i>
+                                            <span class="form-check-label-text">Model Dev</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="services-error" class="error-message"></div>
+                                </div>
+                                <div class="col-lg-12 col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" name="message"
+                                            placeholder="Tell me about the project"></textarea>
+                                        <label for="message">Tell me about the project</label>
+                                        <div id="message-error" class="error-message"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12 ms-auto">
+                                    <button type="submit" class="form-control">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="copyright-text-wrap">
+                        <p class="mb-0">
+                            <span class="copyright-text">Created By <a target="_blank"
+                                    href="https://www.linkedin.com/in/b-vishnu-siva/">Vishnu Siva</a> | Thanks
+                                For
+                                Visiting</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+</body>
+
+</html>
