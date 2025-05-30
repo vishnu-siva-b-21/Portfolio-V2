@@ -1,6 +1,5 @@
 from flask import Flask, render_template, url_for
-
-# from waitress import serve
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -11,5 +10,5 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    # serve(app, host="0.0.0.0", port=8000)
+    # app.run(debug=True)
+    serve(app, host="0.0.0.0", port=8000)
